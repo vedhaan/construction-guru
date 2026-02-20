@@ -1,0 +1,241 @@
+/* ============================= */
+/* SERVICES SECTION */
+/* ============================= */
+
+.services {
+  background: white;
+
+  padding: 8rem 0;
+}
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+/* ============================= */
+/* SERVICE CARD */
+/* ============================= */
+
+.service-card {
+  position: relative;
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover Effect */
+
+.service-card:hover {
+  transform: translateY(-12px);
+  border-color: #f59e0b;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(245, 158, 11, 0.25);
+}
+
+/* ============================= */
+/* IMAGE SECTION */
+/* ============================= */
+
+.service-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.1);
+}
+
+/* ============================= */
+/* CONTENT SECTION */
+/* ============================= */
+
+.service-content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Icon */
+
+.service-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+}
+
+/* Title */
+
+.service-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* Description */
+
+.service-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Link */
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: #f59e0b;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  transition: 0.3s ease;
+}
+
+.service-link::after {
+  content: "→";
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-link {
+  color: #fbbf24;
+}
+
+.service-card:hover .service-link::after {
+  transform: translateX(8px);
+}
+
+/* ============================= */
+/* VIDEO SECTION */
+/* ============================= */
+
+.services-video-container {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  min-height: 400px;
+}
+
+.styled-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+      rgba(15, 23, 42, 0.95) 0%,
+      rgba(15, 23, 42, 0.5) 100%);
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+}
+
+.overlay-content {
+  max-width: 600px;
+}
+
+.overlay-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.overlay-content h3 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.overlay-content p {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 992px) {
+  .video-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+  .video-overlay {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-wrapper {
+    aspect-ratio: 4 / 5;
+  }
+
+  .overlay-content h3 {
+    font-size: 2.5rem;
+  }
+}

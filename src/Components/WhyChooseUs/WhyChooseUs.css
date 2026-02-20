@@ -1,0 +1,55 @@
+.why-choose-us {
+    background: white;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.reason-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.reason-card:hover {
+    background: var(--bg-soft);
+    transform: translateY(-5px);
+}
+
+.reason-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    margin: 0 auto 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+}
+
+.reason-card:hover .reason-icon-wrapper {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-glow);
+}
+
+.reason-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--text-main);
+}
+
+.reason-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}

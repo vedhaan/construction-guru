@@ -1,0 +1,109 @@
+/* Contact Section */
+.contact {
+  background: linear-gradient(to bottom, var(--bg-body), var(--secondary-color));
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.contact-info .description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s;
+}
+
+.info-item:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.info-item .icon-box {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.info-item h4 {
+  color: white;
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.info-item p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Form */
+.contact-form-wrapper {
+  padding: 2.5rem;
+  background: rgba(30, 41, 59, 0.6);
+  /* Slightly darker glass for contrast */
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: white;
+  font-family: var(--font-main);
+  transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.full-width {
+  width: 100%;
+  justify-content: center;
+}

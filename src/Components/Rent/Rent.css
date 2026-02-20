@@ -1,0 +1,114 @@
+.rent-section {
+    background: white;
+}
+
+.rent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.rent-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 992px) {
+    .rent-grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.rent-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.rent-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.rent-card:hover img {
+    transform: scale(1.05);
+}
+
+.rent-card.featured {
+    height: 400px;
+}
+
+.rent-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+}
+
+.rent-details .price {
+    background: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.rent-details h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0.2rem;
+}
+
+.rent-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rent-card.small {
+    height: 190px;
+    display: flex;
+    background: white;
+}
+
+.rent-card.small img {
+    width: 40%;
+}
+
+.rent-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rent-cta-card {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.rent-cta-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.rent-cta-card p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}

@@ -1,0 +1,137 @@
+/* ================================
+   CATEGORIES SECTION
+================================ */
+
+.categories-section {
+    padding: 6rem 0;
+    background: var(--bg-soft);
+}
+
+/* ================================
+   GRID
+================================ */
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    perspective: 1000px;
+}
+
+/* ================================
+   CARD
+================================ */
+
+.category-card {
+    position: relative;
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    border: 1px solid rgba(79, 70, 229, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+/* ================================
+   CARD HOVER EFFECT
+================================ */
+
+.category-card:hover {
+    transform: translateY(-12px);
+    box-shadow:
+        0 25px 60px rgba(245, 158, 11, 0.15),
+        0 0 40px rgba(212, 175, 55, 0.1);
+    border-color: transparent;
+    z-index: 2;
+}
+
+/* Gradient border glow effect */
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: calc(var(--radius-md) + 2px);
+    padding: 2px;
+    background: var(--gradient-primary);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+/* ================================
+   ICON
+================================ */
+
+.cat-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.15);
+}
+
+.category-card:hover .cat-icon {
+    background: var(--gradient-primary);
+    color: white;
+    transform: scale(1.15) rotate(6deg);
+    box-shadow: 0 15px 30px rgba(236, 72, 153, 0.35);
+}
+
+/* ================================
+   TEXT STYLING
+================================ */
+
+.category-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: #1e293b;
+    letter-spacing: 0.3px;
+}
+
+.category-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+    .categories-section {
+        padding: 4rem 0;
+    }
+
+    .category-card {
+        padding: 2rem 1.5rem;
+    }
+}
