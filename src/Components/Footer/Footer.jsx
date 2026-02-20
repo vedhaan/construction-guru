@@ -1,6 +1,6 @@
 import Reveal from "../common/Reveal";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import "./Footer.css";
+import "./footer.css";
 import logo from "../../assets/logo_.png";
 
 const Footer = () => {
