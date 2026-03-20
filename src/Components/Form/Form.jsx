@@ -11,8 +11,8 @@ const Form = () => {
             <form action="https://formspree.io/f/xyzbqowj" method="POST">
             <div className="form-grids">
                 <div className="form-groups">
-                    <label name="vendorType">Vendor Type</label>
-                    <input type="text" />
+                    <label>Vendor Type</label>
+                    <input name="vendorType" type="text" />
                 </div>
 
                 <div className="form-grous">
