@@ -74,6 +74,7 @@ const Form = () => {
                     <label>Upload Drawings / BOQ</label>
                     <div className="upload-box">
                         Choose files (PDF / JPG / PNG / Excel)
+                        <input type="file" />
                     </div>
                 </div>
 
