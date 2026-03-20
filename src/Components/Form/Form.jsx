@@ -11,37 +11,37 @@ const Form = () => {
             <form action="https://formspree.io/f/xyzbqowj" method="POST">
             <div className="form-grids">
                 <div className="form-groups">
-                    <label>Vendor Type</label>
+                    <label name="vendorType">Vendor Type</label>
                     <select><option>Select Vendor Type</option></select>
                 </div>
 
                 <div className="form-grous">
-                    <label>Project Type</label>
+                    <label name="ProjectType">Project Type</label>
                     <select><option>Select Project Type</option></select>
                 </div>
 
                 <div className="form-groups">
                     <label>Project Title</label>
-                    <input type="text" placeholder="e.g. 2BHK Residential Construction" />
+                    <input type="text" name="ProjectName" placeholder="e.g. 2BHK Residential Construction" />
                 </div>
 
                 <div className="form-groups">
-                    <label>State</label>
+                    <label name="State">State</label>
                     <select><option>Select State</option></select>
                 </div>
 
                 <div className="form-groups">
-                    <label>Region</label>
+                    <label name="Region">Region</label>
                     <select><option>Select Region</option></select>
                 </div>
 
                 <div className="form-groups">
-                    <label>City</label>
+                    <label name="City">City</label>
                     <select><option>Select City</option></select>
                 </div>
 
                 <div className="form-groups">
-                    <label>Approx Budget (₹)</label>
+                    <label name="Budget">Approx Budget (₹)</label>
                     <select><option>Select Budget</option></select>
                 </div>
 
