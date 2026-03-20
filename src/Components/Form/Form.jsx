@@ -8,7 +8,7 @@ const Form = () => {
             <div className="subtitle">
                 Submit your project details to connect with verified vendors
             </div>
-
+            <form action="https://formspree.io/f/xwvrzlqj" method="POST">
             <div className="form-grids">
                 <div className="form-groups">
                     <label>Vendor Type</label>
@@ -83,7 +83,8 @@ const Form = () => {
                 </div>
             </div>
 
-            <button className="buttons">Submit Project</button>
+            <button className="buttons" type="submit">Submit Project</button>
+            </form>
 
             <div className="note">
                 🔒 Your details are shared only with verified vendors
