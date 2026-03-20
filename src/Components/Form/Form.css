@@ -1,0 +1,176 @@
+/* ===== Base ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f1f5f9, #f8fafc);
+    margin: 0;
+}
+
+/* ===== Container ===== */
+.form-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Header ===== */
+.form-container h2 {
+    margin-bottom: 6px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ===== Grid Layout ===== */
+.form-grids {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* ===== Form Groups ===== */
+.form-groups {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fix typo support (in case used) */
+.form-grous {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Labels ===== */
+label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+/* ===== Inputs ===== */
+input,
+select,
+textarea {
+    padding: 11px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    background: #fff;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ff7a00;
+    box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.15);
+}
+
+/* Hover Effect */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #d1d5db;
+}
+
+/* ===== Textarea ===== */
+textarea {
+    resize: none;
+    height: 110px;
+}
+
+/* ===== Upload Box ===== */
+.upload-box {
+    border: 2px dashed #d1d5db;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #6b7280;
+    background: #fafafa;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    border-color: #ff7a00;
+    background: #fff7ed;
+    color: #ff7a00;
+}
+
+/* ===== Full Width ===== */
+.full-width {
+    grid-column: span 3;
+}
+
+/* ===== Button ===== */
+.buttons {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #ff7a00, #ff9a2f);
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.buttons:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 122, 0, 0.3);
+}
+
+/* ===== Note ===== */
+.note {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 50px;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .form-grids {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .full-width {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .form-container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .form-grids {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .buttons {
+        width: 100%;
+        float: none;
+    }
+}

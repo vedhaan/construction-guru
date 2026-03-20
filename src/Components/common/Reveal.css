@@ -1,0 +1,46 @@
+.reveal-container {
+    will-change: transform, opacity, filter;
+    transition-property: transform, opacity, filter;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Variants */
+.reveal-hidden {
+    opacity: 0;
+}
+
+.reveal-hidden.slide-up {
+    transform: translateY(40px);
+}
+
+.reveal-hidden.slide-down {
+    transform: translateY(-40px);
+}
+
+.reveal-hidden.slide-left {
+    transform: translateX(40px);
+}
+
+.reveal-hidden.slide-right {
+    transform: translateX(-40px);
+}
+
+.reveal-hidden.zoom {
+    transform: scale(0.8);
+}
+
+.reveal-hidden.scale {
+    transform: scale(1.2);
+}
+
+.reveal-hidden.blur {
+    filter: blur(10px);
+    transform: translateY(20px);
+}
+
+/* Visible State */
+.reveal-visible {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+    filter: blur(0) !important;
+}
