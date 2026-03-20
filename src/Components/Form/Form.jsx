@@ -12,7 +12,7 @@ const Form = () => {
             <div className="form-grids">
                 <div className="form-groups">
                     <label name="vendorType">Vendor Type</label>
-                    <select><option>Select Vendor Type</option></select>
+                    <input type="text" />
                 </div>
 
                 <div className="form-grous">
