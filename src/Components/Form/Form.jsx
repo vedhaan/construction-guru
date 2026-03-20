@@ -12,36 +12,36 @@ const Form = () => {
             <div className="form-grids">
                 <div className="form-groups">
                     <label>Vendor Type</label>
-                    <input name="vendorType" type="text" />
+                    <select><option>Select Vendor Type</option></select>
                 </div>
 
                 <div className="form-grous">
-                    <label name="ProjectType">Project Type</label>
+                    <label>Project Type</label>
                     <select><option>Select Project Type</option></select>
                 </div>
 
                 <div className="form-groups">
                     <label>Project Title</label>
-                    <input type="text" name="ProjectName" placeholder="e.g. 2BHK Residential Construction" />
+                    <input type="text" placeholder="e.g. 2BHK Residential Construction" />
                 </div>
 
                 <div className="form-groups">
-                    <label name="State">State</label>
+                    <label>State</label>
                     <select><option>Select State</option></select>
                 </div>
 
                 <div className="form-groups">
-                    <label name="Region">Region</label>
+                    <label>Region</label>
                     <select><option>Select Region</option></select>
                 </div>
 
                 <div className="form-groups">
-                    <label name="City">City</label>
+                    <label>City</label>
                     <select><option>Select City</option></select>
                 </div>
 
                 <div className="form-groups">
-                    <label name="Budget">Approx Budget (₹)</label>
+                    <label>Approx Budget (₹)</label>
                     <select><option>Select Budget</option></select>
                 </div>
 
@@ -74,7 +74,7 @@ const Form = () => {
                     <label>Upload Drawings / BOQ</label>
                     <div className="upload-box">
                         Choose files (PDF / JPG / PNG / Excel)
-                        <input name="file" type="file" />
+                        <input type="file" />
                     </div>
                 </div>
 
