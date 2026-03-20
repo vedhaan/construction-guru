@@ -8,7 +8,7 @@ const Form = () => {
             <div className="subtitle">
                 Submit your project details to connect with verified vendors
             </div>
-            <form action="https://formspree.io/f/xwvrzlqj" method="POST">
+            <form action="https://formspree.io/f/xyzbqowj" method="POST">
             <div className="form-grids">
                 <div className="form-groups">
                     <label>Vendor Type</label>
