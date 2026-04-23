@@ -42,7 +42,7 @@ export const services = [
 
         icon: <BoxSelect size={28} />,
         image: elevationImg,
-        title: "3D Elevation",
+        title: "2D/3D Planning",
         desc: "Photorealistic 3D external views to visualize your project before construction."
     },
     {
@@ -61,16 +61,9 @@ export const services = [
     },
     {
 
-        icon: <Camera size={28} />,
-        image: archPhotoImg,
-        title: "Arch-Photography",
-        desc: "Professional site and architectural photography for documentation and marketing."
-    },
-    {
-
         icon: <Armchair size={28} />,
         image: customFurnitureImg,
-        title: "Custom Furniture",
+        title: "Custom Furniture with Car Pentring",
         desc: "Bespoke furniture design and installation for residential and commercial projects."
     },
 
@@ -86,7 +79,7 @@ export const services = [
 
         icon: <HardHat size={28} />,
         image: labourImg,
-        title: "General Contractor",
+        title: "General Civil Contractor",
         desc: "End-to-end site management and construction execution by expert teams."
     },
     {
@@ -114,7 +107,7 @@ export const services = [
 
         icon: <Building2 size={28} />,
         image: constructionPngImg,
-        title: "Steel Binder Sheds",
+        title: "Industrial Shed Work",
         desc: "Construction of industrial steel structures and binder structure sheds."
     },
     {
@@ -203,6 +196,41 @@ export const services = [
         icon: <ArrowUpSquare size={28} />,
         image: safetyImg,
         title: "Lift & Elevators",
+        desc: "Supplying and maintaining advanced elevator systems for all building types."
+    },
+        {
+
+        icon: <ArrowUpSquare size={28} />,
+        image: safetyImg,
+        title: "Glasswork & Partition",
+        desc: "Supplying and maintaining advanced elevator systems for all building types."
+    },
+    {
+
+        icon: <ArrowUpSquare size={28} />,
+        image: safetyImg,
+        title: "Aluminium Section",
+        desc: "Supplying and maintaining advanced elevator systems for all building types."
+    },
+    {
+
+        icon: <ArrowUpSquare size={28} />,
+        image: safetyImg,
+        title: "Fabrication ",
+        desc: "Supplying and maintaining advanced elevator systems for all building types."
+    },
+    {
+
+        icon: <ArrowUpSquare size={28} />,
+        image: safetyImg,
+        title: "Paver Block and Landscaping",
+        desc: "Supplying and maintaining advanced elevator systems for all building types."
+    },
+    {
+
+        icon: <ArrowUpSquare size={28} />,
+        image: safetyImg,
+        title: "Solar Services",
         desc: "Supplying and maintaining advanced elevator systems for all building types."
     }
 ];

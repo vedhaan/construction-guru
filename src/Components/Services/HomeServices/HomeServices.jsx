@@ -27,16 +27,6 @@ const HomeServices = () => {
                             Premium <span className="text-gradient">Services</span>
                         </h2>
                     </div>
-
-                    {/* NAV BUTTONS */}
-                    <div className="slider-controls">
-                        <button ref={prevRef} className="slider-btn">
-                            <ChevronLeft size={22} />
-                        </button>
-                        <button ref={nextRef} className="slider-btn">
-                            <ChevronRight size={22} />
-                        </button>
-                    </div>
                 </div>
 
                 {/* SLIDER */}
@@ -92,7 +82,20 @@ const HomeServices = () => {
                             </div>
                         </SwiperSlide>
                     ))}
+                                    {/* HEADER */}
+                <div className="section-header-row">
+                    {/* NAV BUTTONS */}
+                    <div className="slider-controls">
+                        <button ref={prevRef} className="slider-btn">
+                            <ChevronLeft size={22} />
+                        </button>
+                        <button ref={nextRef} className="slider-btn">
+                            <ChevronRight size={22} />
+                        </button>
+                    </div>
+                </div>
                 </Swiper>
+
 
                 {/* MAIN BUTTON */}
                 <div className="center-btn">

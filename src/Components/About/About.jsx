@@ -71,12 +71,12 @@ const About = () => {
             <div className="stats-row">
 
               <div className="stat-item">
-                <div className="stat-value">250+</div>
+                <div className="stat-value">100+</div>
                 <div className="stat-label">Projects Completed</div>
               </div>
 
               <div className="stat-item">
-                <div className="stat-value">180+</div>
+                <div className="stat-value">95%</div>
                 <div className="stat-label">Happy Clients</div>
               </div>
 

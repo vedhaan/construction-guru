@@ -80,16 +80,19 @@ const Footer = () => {
               <h4>Contact</h4>
               <ul>
                 <li>
-                  <a href="mailto:hello@constructionguru.com">
-                    hello@constructionguru.com
+                  <a href="mailto:constructionguru247@gmail.com">
+                    constructionguru247@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+15551234567">
-                    +1 (555) 123-4567
+                  <a href="tel:+918866776836">
+                    +91 88667 76836
+                  </a><br />
+                  <a href="tel:+918866776840">
+                    +91 88667 76840
                   </a>
                 </li>
-                <li>Beverly Hills, CA</li>
+                <li>Bhavnagar, Gujarat</li>
               </ul>
             </div>
           </Reveal>

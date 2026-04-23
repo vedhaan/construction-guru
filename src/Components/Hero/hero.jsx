@@ -76,23 +76,23 @@ const Hero = () => {
 
           <div className="hero-stats">
             <div className="stat-item">
-              <span className="stat-num">1200+</span>
+              <span className="stat-num">100+</span>
               <span className="stat-label">Premium Homes</span>
             </div>
 
             <div className="stat-divider"></div>
 
             <div className="stat-item">
-              <span className="stat-num">4500+</span>
+              <span className="stat-num">95%</span>
               <span className="stat-label">Happy Clients</span>
             </div>
 
-            <div className="stat-divider"></div>
+            {/* <div className="stat-divider"></div>
 
             <div className="stat-item">
               <span className="stat-num">100+</span>
               <span className="stat-label">Awards Won</span>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
