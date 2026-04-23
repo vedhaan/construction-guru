@@ -12,7 +12,6 @@ import renovationImg from "../assets/services/renovation.jpg";
 import interiorImg from "../assets/services/interior.jpg";
 import planningImg from "../assets/services/planning.jpg";
 import elevationImg from "../assets/services/elevation.jpg";
-import labourImg from "../assets/services/labour.jpg";
 import professionalImg from "../assets/services/professional.jpg";
 import designPlanningImg from "../assets/services/design_planning.png";
 import constructionPngImg from "../assets/services/construction.png";
@@ -21,6 +20,26 @@ import archPhotoImg from "../assets/services/arch_photography.png";
 import customFurnitureImg from "../assets/services/custom_furniture.png";
 import safetyImg from "../assets/services/safety.png";
 import vastuImg from "../assets/services/vastu.jpg";
+import plumbingImg from "../assets/services/plumbing.jpeg";
+import electricImg from "../assets/services/electric.jpeg";
+import tileImg from "../assets/services/tile.jpeg";
+import colorImg from "../assets/services/color.jpeg";
+import labourImg from "../assets/services/labour.jpeg";
+import redevelopmentImg from "../assets/services/redevelopment.webp";
+import demolationImg from "../assets/services/demolation.jpg";
+import shutteringImg from "../assets/services/shuttering.jpeg";
+import shedImg from "../assets/services/shed.webp";
+import generalcivilImg from "../assets/services/generalcivil.jpeg";
+import popImg from "../assets/services/pop.webp";
+import waterImg from "../assets/services/water.jpg";
+import metalfabricImg from "../assets/services/metalfabric.jpg";
+import epoxyImg from "../assets/services/epoxy.webp";
+import elevatorImg from "../assets/services/elevator.webp";
+import glassImg from "../assets/services/glasswork.jpg";
+import aluminiumImg from "../assets/services/aluminium.webp";
+import fabricationImg from "../assets/services/fabrication.webp";
+import pabourImg from "../assets/services/pabour.webp";
+import solarImg from "../assets/services/solar.webp";
 
 export const services = [
     // --- Design & Planning ---
@@ -63,7 +82,7 @@ export const services = [
 
         icon: <Armchair size={28} />,
         image: customFurnitureImg,
-        title: "Custom Furniture with Car Pentring",
+        title: "Custom Furniture with Carpenting",
         desc: "Bespoke furniture design and installation for residential and commercial projects."
     },
 
@@ -78,35 +97,35 @@ export const services = [
     {
 
         icon: <HardHat size={28} />,
-        image: labourImg,
+        image: generalcivilImg,
         title: "General Civil Contractor",
         desc: "End-to-end site management and construction execution by expert teams."
     },
     {
 
         icon: <RefreshCw size={28} />,
-        image: renovationImg,
+        image: redevelopmentImg,
         title: "Redevelopment",
         desc: "Expert handling of redevelopment projects for aging societies and buildings."
     },
     {
 
         icon: <Trash2 size={28} />,
-        image: internalImg,
+        image: demolationImg,
         title: "Building Demolition",
         desc: "Safe and controlled demolition services with debris management."
     },
     {
 
         icon: <Layers size={28} />,
-        image: labourImg,
+        image: shutteringImg,
         title: "Shuttering & Centering",
         desc: "Precision shuttering and centering work for RCC slabs and columns."
     },
     {
 
         icon: <Building2 size={28} />,
-        image: constructionPngImg,
+        image: shedImg,
         title: "Industrial Shed Work",
         desc: "Construction of industrial steel structures and binder structure sheds."
     },
@@ -122,56 +141,56 @@ export const services = [
     {
 
         icon: <Zap size={28} />,
-        image: internalImg,
+        image: electricImg,
         title: "Electrical Work",
         desc: "Complete internal and external electrical installations and maintenance."
     },
     {
 
         icon: <Wrench size={28} />,
-        image: internalImg,
+        image: plumbingImg,
         title: "Plumbing Services",
         desc: "High-quality plumbing, drainage, and water supply system installations."
     },
     {
 
         icon: <Paintbrush size={28} />,
-        image: renovationImg,
+        image: colorImg,
         title: "Professional Painting",
         desc: "Expert interior and exterior painting with texture and protective finishes."
     },
     {
 
         icon: <Grid size={28} />,
-        image: interiorImg,
+        image: tileImg,
         title: "Tiling & Marbeling",
         desc: "Precision installation of tiles, granite, and Italian marble surfaces."
     },
     {
 
         icon: <Box size={28} />,
-        image: interiorImg,
+        image: popImg,
         title: "POP & False Ceiling",
         desc: "Designer POP ceilings and modern decorative false ceiling installations."
     },
     {
 
         icon: <Droplets size={28} />,
-        image: renovationImg,
+        image: waterImg,
         title: "Water Proofing",
         desc: "Advanced terrace and toilet waterproofing solutions with long-term warranty."
     },
     {
 
         icon: <Hammer size={28} />,
-        image: internalImg,
+        image: metalfabricImg,
         title: "Metal Fabrication",
         desc: "MS and SS fabrication work for grills, gates, and structural elements."
     },
     {
 
         icon: <Layers size={28} />,
-        image: interiorImg,
+        image: epoxyImg,
         title: "Epoxy Flooring",
         desc: "Industrial and decorative epoxy floor coatings for durability and shine."
     },
@@ -194,43 +213,43 @@ export const services = [
     {
 
         icon: <ArrowUpSquare size={28} />,
-        image: safetyImg,
+        image: elevatorImg,
         title: "Lift & Elevators",
         desc: "Supplying and maintaining advanced elevator systems for all building types."
     },
         {
 
         icon: <ArrowUpSquare size={28} />,
-        image: safetyImg,
+        image: glassImg,
         title: "Glasswork & Partition",
-        desc: "Supplying and maintaining advanced elevator systems for all building types."
+        desc: "Modern glass installations for sleek and open spaces."
     },
     {
 
         icon: <ArrowUpSquare size={28} />,
-        image: safetyImg,
+        image: aluminiumImg,
         title: "Aluminium Section",
-        desc: "Supplying and maintaining advanced elevator systems for all building types."
+        desc: "Lightweight, durable aluminium frameworks for multiple uses."
     },
     {
 
         icon: <ArrowUpSquare size={28} />,
-        image: safetyImg,
-        title: "Fabrication ",
-        desc: "Supplying and maintaining advanced elevator systems for all building types."
+        image: fabricationImg,
+        title: "Fabrication",
+        desc: "Custom-built structures tailored to project requirements. (duplicate—remove or merge with metal fabrication)"
     },
     {
 
         icon: <ArrowUpSquare size={28} />,
-        image: safetyImg,
-        title: "Paver Block and Landscaping",
-        desc: "Supplying and maintaining advanced elevator systems for all building types."
+        image: pabourImg,
+        title: "Pabour Block and Landscaping",
+        desc: "Outdoor spaces designed for beauty and functionality."
     },
     {
 
         icon: <ArrowUpSquare size={28} />,
-        image: safetyImg,
+        image: solarImg,
         title: "Solar Services",
-        desc: "Supplying and maintaining advanced elevator systems for all building types."
+        desc: "Sustainable energy solutions for cost-efficient power usage."
     }
 ];

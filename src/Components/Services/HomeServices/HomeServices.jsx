@@ -82,8 +82,8 @@ const HomeServices = () => {
                             </div>
                         </SwiperSlide>
                     ))}
-                                    {/* HEADER */}
-                <div className="section-header-row">
+                    {/* HEADER */}
+
                     {/* NAV BUTTONS */}
                     <div className="slider-controls">
                         <button ref={prevRef} className="slider-btn">
@@ -93,7 +93,6 @@ const HomeServices = () => {
                             <ChevronRight size={22} />
                         </button>
                     </div>
-                </div>
                 </Swiper>
 
 
