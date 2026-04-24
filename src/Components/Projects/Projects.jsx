@@ -22,14 +22,6 @@ const projects = [
         price: "Starts $450k",
         image: project2,
     },
-    {
-        id: 3,
-        title: "Ocean Breeze Apts",
-        location: "Coastal Road, Beachside",
-        status: "Pre-Launch",
-        price: "Starts $180k",
-        image: project3,
-    },
 ];
 
 const Projects = () => {
