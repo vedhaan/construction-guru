@@ -24,14 +24,21 @@ const Contact = () => {
                 <div className="icon-box"><Phone size={24} /></div>
                 <div>
                   <h4>Phone</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <a href="tel:918866776836" target="_blank" rel="noopener noreferrer">
+                    +91 88667 76836
+                  </a><br />
+                  <a href="tel:918866776840" target="_blank" rel="noopener noreferrer">
+                    +91 88667 76840
+                  </a>
                 </div>
               </div>
               <div className="info-item glass-card">
                 <div className="icon-box"><Mail size={24} /></div>
                 <div>
                   <h4>Email</h4>
-                  <p>hello@realestate.com</p>
+                  <a href="mailto:constructionguru247@gmail.com" target="_blank" rel="noopener noreferrer">
+                    constructionguru247@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -41,18 +48,18 @@ const Contact = () => {
 
         <div className="contact-form-wrapper glass-card">
           <Reveal direction="left" delay={0.2} width="100%" variant="scale">
-            <form className="contact-form">
+            <form className="contact-form" action="https://formspree.io/f/xwvrzlqj" method="POST">
               <div className="form-group">
                 <label>Name</label>
-                <input type="text" placeholder="Your Name" />
+                <input type="text" name="name" placeholder="Your Name" />
               </div>
               <div className="form-group">
                 <label>Email</label>
-                <input type="email" placeholder="Your Email" />
+                <input type="email" name="email" placeholder="Your Email" />
               </div>
               <div className="form-group">
                 <label>Message</label>
-                <textarea placeholder="How can we help?" rows="4"></textarea>
+                <textarea name="message" placeholder="How can we help?" rows="4"></textarea>
               </div>
               <button type="submit" className="btn btn-primary full-width">
                 Send Message <Send size={18} />
