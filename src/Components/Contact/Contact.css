@@ -74,15 +74,13 @@
   flex-shrink: 0;
 }
 
-.info-item h4 {
-  color: white;
-  margin-bottom: 0.2rem;
-  font-size: 1.1rem;
+.info-item h4,
+.form-group label {
+  color: var(--text-main);
 }
 
-.info-item p {
+.contact-info .description {
   color: var(--text-muted);
-  margin: 0;
 }
 
 /* Form */
