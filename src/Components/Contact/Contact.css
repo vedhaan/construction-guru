@@ -9,8 +9,6 @@
     linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #eef2f7 100%);
 }
 
-
-
 .contact-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -25,7 +23,7 @@
     align-items: center;
   }
 
-  .subtitle-contact {
+  .subtitle {
     margin-inline: auto;
   }
 }
@@ -76,16 +74,16 @@
   flex-shrink: 0;
 }
 
-.info-item h4,
-.form-group label {
-  color: var(--text-main);
+.info-item h4 {
+  color: white;
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
 }
 
-.contact-info .description {
+.info-item p {
   color: var(--text-muted);
+  margin: 0;
 }
-
-
 
 /* Form */
 .contact-form-wrapper {
