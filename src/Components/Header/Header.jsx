@@ -25,6 +25,7 @@ function Header() {
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
+    { name: "Career", href: "/career" },
     { name: "Contact", href: "/contact" },
   ];
 

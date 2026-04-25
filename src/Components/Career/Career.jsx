@@ -94,7 +94,6 @@ const Career = () => {
           <h1 className="title">Build Your Future With Us</h1>
           <p className="subtitle">Join a team of visionaries and experts dedicated to shaping the skylines of tomorrow. Your journey to excellence starts here.</p>
           <div className="hero-btns">
-            <a href="#openings" className="btn btn-primary">View Openings</a>
             <a href="#application-form" className="btn btn-outline" style={{ marginLeft: '1rem' }}>Apply Now</a>
           </div>
         </div>
@@ -186,14 +185,6 @@ const Career = () => {
                   <input type="url" placeholder="https://linkedin.com/in/username" />
                 </div>
                 <div className="form-group full-width">
-                  <label>Upload Resume (PDF/DOC)</label>
-                  <div className="resume-upload-box">
-                    <i className="fas fa-cloud-upload-alt"></i>
-                    <span>Drag and drop or click to upload your resume</span>
-                    <input type="file" accept=".pdf,.doc,.docx" required />
-                  </div>
-                </div>
-                <div className="form-group full-width">
                   <label>Cover Letter / Additional Information</label>
                   <textarea placeholder="Tell us why you're a great fit for this role..." rows="5"></textarea>
                 </div>
@@ -256,15 +247,6 @@ const Career = () => {
               <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80" alt="Innovation" />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section cta-section" style={{ background: 'var(--secondary-color)', color: 'white', textAlign: 'center' }}>
-        <div className="container">
-          <h2 className="title" style={{ color: 'white' }}>Don't See a Perfect Fit?</h2>
-          <p className="subtitle" style={{ color: 'rgba(255,255,255,0.7)', marginInline: 'auto' }}>We are always looking for exceptional talent. Send us your resume and we'll keep you in mind for future opportunities.</p>
-          <button className="btn btn-primary" onClick={() => handleApplyClick('General Application')}>Send General Application</button>
         </div>
       </section>
     </div>

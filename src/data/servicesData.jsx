@@ -251,5 +251,12 @@ export const services = [
         image: solarImg,
         title: "Solar Services",
         desc: "Sustainable energy solutions for cost-efficient power usage."
+    },
+    {
+
+        icon: <ArrowUpSquare size={28} />,
+        image: solarImg,
+        title: "Pre - Post Construction Termite and Pest Control",
+        desc: "Effective anti-termite and pest protection before and after construction for long-lasting structural safety."
     }
 ];
