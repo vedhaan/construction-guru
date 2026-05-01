@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../common/Reveal";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import "./footer.css";
+import "./Footer.css";
 import logo from "../../assets/logo_.png";
 
 const Footer = () => {
