@@ -11,6 +11,7 @@ import ContactPage from './Pages/ContactPage';
 import InquiryPage from './Pages/InquiryPage';
 import CareerPage from './Pages/CareerPage';
 import PolicyPage from './Pages/PolicyPage';
+import TermsPage from './Pages/TermsPage';
 
 import ScrollToTop from './Components/common/ScrollToTop';
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/inquiry" element={<InquiryPage />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/policy" element={<PolicyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
       </Routes>
       <Footer />
     </Router>
