@@ -1,0 +1,105 @@
+.sell-section {
+    background: var(--bg-body);
+    overflow: hidden;
+}
+
+.sell-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .sell-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.label-tag {
+    display: inline-block;
+    background: rgba(236, 72, 153, 0.1);
+    color: var(--secondary-color);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.sell-content .title {
+    margin-bottom: 1.5rem;
+}
+
+.sell-content .description {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+}
+
+.sell-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sell-feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.sf-icon {
+    min-width: 50px;
+    height: 50px;
+    background: var(--bg-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: var(--primary-color);
+}
+
+.sell-feature h4 {
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: var(--text-main);
+}
+
+.sell-feature p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.mt-6 {
+    margin-top: 2.5rem;
+}
+
+/* Image Side */
+.image-card-glass {
+    position: relative;
+    border-radius: var(--radius-lg);
+    background: var(--bg-surface);
+    padding: 1rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.image-card-glass img {
+    width: 100%;
+    border-radius: var(--radius-md);
+}
+
+.floating-stat {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
