@@ -180,10 +180,6 @@ export default function FAQPage() {
             <span className="faq-hero__badge-dot" />
             Support Center
           </div>
-          <h1 className="faq-hero__title">
-            Got <span className="faq-hero__title--accent">Questions?</span>
-            <br />We Have Answers.
-          </h1>
           <p className="faq-hero__sub">
             {totalItems} answers across {faqData.length} categories — covering everything from pricing to timelines.
           </p>
