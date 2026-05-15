@@ -407,20 +407,31 @@
   transform: rotate(180deg);
 }
 
-/* ── Answer ── */
+/* ── Answer — CSS grid-rows accordion (no JS scrollHeight needed) ── */
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer--open {
+  grid-template-rows: 1fr;
 }
 
 .faq-answer__inner {
-  padding: 0 22px 20px;
+  overflow: hidden;
+  padding: 0 22px 0;
   font-size: 0.92rem;
   line-height: 1.75;
   color: var(--text-muted);
-  border-top: 1px solid rgba(15, 23, 42, 0.06);
-  padding-top: 16px;
+  border-top: 0px solid rgba(15, 23, 42, 0.06);
+  transition: padding 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+              border-top-width 0.1s ease;
+}
+
+.faq-answer--open .faq-answer__inner {
+  padding: 16px 22px 20px;
+  border-top-width: 1px;
 }
 
 /* ── Empty State ── */

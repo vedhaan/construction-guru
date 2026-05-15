@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   FaHardHat,
   FaMoneyBillWave,
@@ -20,16 +20,16 @@ const faqData = [
     icon: <FaHardHat />,
     questions: [
       {
-        q: "What services does ConstructionGuru offer?",
-        a: "ConstructionGuru provides end-to-end construction and renovation services including design & planning, structural construction, interior finishing, electrical work, plumbing, fabrication, demolition, elevation work, and more. We handle residential, commercial, and industrial projects of all scales.",
+        q: "What is Constructions Guru?",
+        a: "Constructions Guru is a complete one-stop solution for all types of residential, commercial, renovation, repair, interior, architectural, and skilled labour services under one trusted platform.",
       },
       {
-        q: "How do I get started with a project?",
-        a: "Simply fill out our inquiry form or reach out via phone/WhatsApp. Our team will schedule a free consultation to understand your requirements, assess the site, and provide a detailed estimate. Once approved, we assign a dedicated project manager to your job.",
+        q: "Why should I choose Constructions Guru?",
+        a: "Because we provide expert planning, trusted workers, transparent pricing, quality supervision, on-time delivery, and all home & construction services at one place — no need to run after multiple contractors.",
       },
       {
-        q: "Do you operate only in Bhavnagar or across Gujarat?",
-        a: "Our primary base is Bhavnagar, but we take on projects across Gujarat. For large-scale projects outside Bhavnagar, additional mobilization charges may apply. Contact us to discuss your location.",
+        q: "Which areas do you serve?",
+        a: "We serve Bhavnagar and nearby cities across Gujarat based on project requirements. Contact us to confirm availability for your location.",
       },
     ],
   },
@@ -38,20 +38,36 @@ const faqData = [
     icon: <FaMoneyBillWave />,
     questions: [
       {
-        q: "How is project pricing determined?",
-        a: "Pricing depends on project scope, materials chosen, site conditions, and timeline. We provide itemized quotations after a site visit — no hidden costs, no vague estimates. What we quote is what you pay, unless you request scope changes.",
+        q: "Can I get multiple services from one single contact?",
+        a: "Yes. With Constructions Guru, you do not need to contact different contractors separately. We provide all services under one management, saving you time and coordination hassle.",
       },
       {
-        q: "Do you offer fixed-price contracts or charge on actuals?",
-        a: "We offer both. Fixed-price (lump sum) contracts work best for well-defined scopes. For complex or evolving projects, we use cost-plus contracts with transparent billing. We'll recommend the right model after the initial assessment.",
+        q: "Do you work on labour contract or material contract?",
+        a: "We provide flexible contract options: Labour only contract, Labour + material contract, and Custom package contract — depending on what suits your project and budget.",
       },
       {
-        q: "What is the payment schedule?",
-        a: "Payments are milestone-based — typically split across mobilization, structural completion, finishing stages, and handover. We never ask for full upfront payment. Exact milestones are defined in your contract before work begins.",
+        q: "Can I build my home as per my budget?",
+        a: "Yes, we help customers with budget planning and suggest the best possible material and design options accordingly. No project is too small or too constrained — we work within your numbers.",
       },
       {
-        q: "Are there any hidden charges I should know about?",
-        a: "No. Our quotations break down every cost — materials, labour, transport, and overheads. Any change orders during construction are documented and pre-approved by you before execution. Surprises on invoices are not how we operate.",
+        q: "Is the site visit free?",
+        a: "Basic consultation is customer friendly. Depending on service type, a free estimate and site visit may be available. Contact us to confirm for your specific requirement.",
+      },
+      {
+        q: "Do you provide a written quotation?",
+        a: "Yes, we provide a detailed quotation with full work scope and pricing transparency so you know exactly what you are paying for before work begins.",
+      },
+      {
+        q: "Will there be a legal work agreement?",
+        a: "Yes, for major projects we provide a proper work agreement with clearly defined payment terms, work scope, and timelines — legally documented for both parties.",
+      },
+      {
+        q: "How do payment terms work?",
+        a: "Payment is typically structured in stages: Advance → Running Work Payment → Final Completion Payment. This ensures work progresses steadily without financial risk on either side.",
+      },
+      {
+        q: "Is billing transparent?",
+        a: "Yes, we maintain complete transparency in labour, material, and service charges. You receive itemized billing — no surprise additions after the fact.",
       },
     ],
   },
@@ -60,16 +76,28 @@ const faqData = [
     icon: <FaClock />,
     questions: [
       {
-        q: "How long does a typical construction project take?",
-        a: "Timelines vary widely. A room renovation may take 2–4 weeks. A full residential construction typically takes 6–18 months depending on size and complexity. We provide a detailed project schedule with milestones before we start, and we track it seriously.",
+        q: "Do you handle both small and large projects?",
+        a: "Yes. From a single repair job to a complete construction project, we professionally manage all sizes of work with the same level of attention and supervision.",
       },
       {
-        q: "What happens if the project is delayed?",
-        a: "Delays caused by our execution failures are on us — we work overtime to recover without extra cost to you. Delays from external factors (material supply disruptions, client-driven scope changes, regulatory approvals) are documented and timelines adjusted transparently.",
+        q: "Do you provide full house construction services?",
+        a: "Yes. We provide end-to-end turnkey construction — planning, foundation, RCC, brick work, plaster, tiles, plumbing, electrical, painting, and finishing. One point of contact, complete delivery.",
       },
       {
-        q: "Can I make changes to the design mid-project?",
-        a: "Yes, but understand that mid-project changes almost always affect cost and timeline. We'll give you an honest change order — what it adds in time and money — before proceeding. We won't just absorb scope creep silently and bill you at the end.",
+        q: "Do you provide supervision during construction?",
+        a: "Yes, every project is monitored with proper site supervision and work progress management so quality is maintained at each stage without the customer needing to be on-site constantly.",
+      },
+      {
+        q: "How long does a house construction project usually take?",
+        a: "It depends on plot size, design complexity, and finishing requirements. We provide a realistic estimated timeline before the project starts so you can plan accordingly.",
+      },
+      {
+        q: "Can I hire workers for just one day or one job?",
+        a: "Yes, a service-call based skilled worker facility is available. You can hire for a single task without committing to a full project contract.",
+      },
+      {
+        q: "How can I book a service?",
+        a: "You can book through Call, WhatsApp, our Website Inquiry Form, or a Direct Visit to our office. Call or WhatsApp us at +91 9016186414 and we will take it from there.",
       },
     ],
   },
@@ -78,38 +106,69 @@ const faqData = [
     icon: <FaShieldAlt />,
     questions: [
       {
-        q: "What quality standards do you follow?",
-        a: "We follow IS (Indian Standard) codes for structural work, electrical, and plumbing. Materials are sourced from reputable suppliers and quality-checked on site. Our site supervisors conduct daily checks and we welcome client inspections at any stage.",
+        q: "Do you provide old house renovation?",
+        a: "Yes, we specialize in home renovation, flat renovation, office renovation, kitchen and bathroom remodeling, waterproofing, and structural repair — giving old spaces a completely fresh and functional life.",
       },
       {
-        q: "Do you provide a warranty on your work?",
-        a: "Yes. Structural work carries a 5-year warranty. Waterproofing and finishing work carries a 1–2 year warranty depending on the system used. Electrical and plumbing work is warranted for 1 year. Terms are specified in your contract.",
+        q: "Do you provide leakage and crack repair?",
+        a: "Yes. We provide waterproofing, damp proofing, terrace leakage treatment, wall crack repair, and seepage solutions with proven materials and tested methods.",
       },
       {
-        q: "How do you handle site safety?",
-        a: "Safety is non-negotiable on our sites. We enforce PPE usage, safety nets, and barricading. All workers are briefed on site-specific hazards. We carry contractor all-risk insurance and workmen's compensation coverage.",
+        q: "Do you provide emergency repair workers?",
+        a: "Yes. Urgent plumbing, electrical, lock, fitting, and repair services can be arranged quickly. Call or WhatsApp us at +91 9016186414 for fast response.",
+      },
+      {
+        q: "Do you guarantee quality work?",
+        a: "Yes. We focus on skilled workmanship, quality checking at every stage, and full customer satisfaction. If something is not right, we make it right.",
+      },
+      {
+        q: "Are your workers verified?",
+        a: "Yes. Trusted, experienced, and background-checked workers are assigned under direct company management — not random freelancers picked off the street.",
       },
     ],
   },
   {
-    category: "Materials & Sustainability",
+    category: "Materials & Services",
     icon: <FaLeaf />,
     questions: [
       {
-        q: "Can I supply my own materials?",
-        a: "Yes. If you prefer to source materials yourself, we work with what you provide. However, we won't warranty workmanship defects that result from substandard client-supplied materials. We'll flag any material quality concerns before installation.",
+        q: "Can you renovate only one room, kitchen, or bathroom?",
+        a: "Yes, partial renovation services are available as per customer need. You do not have to commit to a full house renovation if only one area requires attention.",
       },
       {
-        q: "Do you offer eco-friendly or sustainable construction options?",
-        a: "Yes. We can incorporate fly-ash bricks, AAC blocks, solar panel installations, rainwater harvesting systems, low-VOC paints, and energy-efficient lighting. Discuss your sustainability goals with us during planning and we'll design accordingly.",
+        q: "Do you provide architect planning?",
+        a: "Yes. We provide 2D plans, 3D elevation, structural layout, municipal drawing, and space planning services — everything you need before breaking ground.",
+      },
+      {
+        q: "Do you provide interior design solutions?",
+        a: "Yes. We provide complete interior planning including modular kitchen, furniture layout, false ceiling, lighting design, and wall decor — tailored to your taste and space.",
+      },
+      {
+        q: "Can I customize the house design as per my family's requirement?",
+        a: "Absolutely. Every design is customized according to the customer's budget, lifestyle, and space needs. We do not believe in one-size-fits-all solutions.",
+      },
+      {
+        q: "Which skilled workers are available?",
+        a: "We provide: Plumber, Electrician, Carpenter, Mason, Painter, POP Worker, Tile Fitter, Fabricator, Glass Fitter, Aluminium Technician, Welder, and more — all under one platform.",
+      },
+      {
+        q: "Do you provide pest control services?",
+        a: "Yes. We provide termite treatment, cockroach control, rodent control, and full pest management services for residential and commercial properties.",
+      },
+      {
+        q: "Do you provide Vastu consultation?",
+        a: "Yes. Vastu guidance for home, office, shop, and plot planning is available to help you align your space with positive energy principles.",
+      },
+      {
+        q: "Do you also provide cleaning after construction?",
+        a: "Yes. Post-construction deep cleaning can be arranged so you receive a spotless, move-in-ready space without dealing with the dust and debris yourself.",
       },
     ],
   },
 ];
 
+// Smooth accordion using max-height with a large enough cap + CSS transition
 function FAQItem({ question, answer, isOpen, onClick, index, isSearchResult }) {
-  const bodyRef = useRef(null);
-
   return (
     <div
       className={`faq-item ${isOpen ? "faq-item--open" : ""} ${isSearchResult ? "faq-item--search-result" : ""}`}
@@ -121,11 +180,8 @@ function FAQItem({ question, answer, isOpen, onClick, index, isSearchResult }) {
           <FaChevronDown />
         </span>
       </button>
-      <div
-        className="faq-answer"
-        ref={bodyRef}
-        style={{ maxHeight: isOpen ? bodyRef.current?.scrollHeight + "px" : "0px" }}
-      >
+      {/* Use a wrapping div with max-height transition; inner div drives the real height */}
+      <div className={`faq-answer ${isOpen ? "faq-answer--open" : ""}`}>
         <div className="faq-answer__inner">{answer}</div>
       </div>
     </div>
@@ -164,6 +220,7 @@ export default function FAQPage() {
 
   const displayData = isSearching ? filteredData : [faqData[activeCategory]];
   const totalItems = faqData.reduce((acc, c) => acc + c.questions.length, 0);
+  const totalResults = filteredData.reduce((a, c) => a + c.questions.length, 0);
 
   return (
     <div className="faq-page">
@@ -180,6 +237,10 @@ export default function FAQPage() {
             <span className="faq-hero__badge-dot" />
             Support Center
           </div>
+          <h1 className="faq-hero__title">
+            Got <span className="faq-hero__title--accent">Questions?</span>
+            <br />We Have Answers.
+          </h1>
           <p className="faq-hero__sub">
             {totalItems} answers across {faqData.length} categories — covering everything from pricing to timelines.
           </p>
@@ -202,9 +263,9 @@ export default function FAQPage() {
           </div>
         </header>
 
-        {/* Body — grid collapses sidebar when searching */}
+        {/* Body */}
         <div className={`faq-body ${isSearching ? "faq-body--searching" : ""}`}>
-          {/* Sidebar always rendered, hidden via class when searching */}
+          {/* Sidebar — always in DOM, animated out when searching */}
           <nav className={`faq-tabs ${isSearching ? "faq-tabs--hidden" : ""}`}>
             {faqData.map((cat, i) => (
               <button
@@ -219,13 +280,11 @@ export default function FAQPage() {
             ))}
           </nav>
 
-          {/* Questions */}
+          {/* Content */}
           <div className="faq-content">
-            {isSearching && (
+            {isSearching && totalResults > 0 && (
               <div className="faq-search-meta">
-                {filteredData.length > 0
-                  ? `${filteredData.reduce((a, c) => a + c.questions.length, 0)} result${filteredData.reduce((a, c) => a + c.questions.length, 0) !== 1 ? "s" : ""} for "${searchQuery}"`
-                  : null}
+                {totalResults} result{totalResults !== 1 ? "s" : ""} for "<strong>{searchQuery}</strong>"
               </div>
             )}
 
@@ -273,13 +332,13 @@ export default function FAQPage() {
             </div>
             <div>
               <h3 className="faq-cta__title">Still have questions?</h3>
-              <p className="faq-cta__sub">Talk to our team — no sales pitch, just straight answers.</p>
+              <p className="faq-cta__sub">Call or WhatsApp us — no sales pitch, just straight answers.</p>
             </div>
             <div className="faq-cta__actions">
               <a href="/contact" className="faq-cta__btn faq-cta__btn--primary">
                 Contact Us
               </a>
-              <a href="https://wa.me/919999999999" className="faq-cta__btn faq-cta__btn--ghost">
+              <a href="https://wa.me/919016186414" className="faq-cta__btn faq-cta__btn--ghost">
                 <FaWhatsapp className="faq-cta__btn-icon" />
                 WhatsApp
               </a>
